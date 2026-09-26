@@ -82,7 +82,7 @@ StartWave(*) {
     NumPut("Int", NumGet(point, 0, "Int") - 64, "Int", NumGet(point, 4, "Int") - 64, Position)
     Started := A_TickCount
     PaintWave()
-    DllCall("ShowWindow", "Ptr", Overlay.Hwnd, "Int", 4)
+    DllCall("SetWindowPos", "Ptr", Overlay.Hwnd, "Ptr", -1, "Int", 0, "Int", 0, "Int", 0, "Int", 0, "UInt", 0x0053)
     SetTimer(PaintWave, 16)
 }
 
