@@ -45,7 +45,7 @@ for index, name in StyleNames
 A_TrayMenu.Check(StyleNames[SelectedStyle])
 A_TrayMenu.Add()
 A_TrayMenu.AddStandard()
-A_IconTip := "Galaxy Cursor – " StyleNames[SelectedStyle]
+A_IconTip := "Galaxy Cursor"
 OnExit(Cleanup)
 
 ~*LButton::StartWave()
@@ -69,7 +69,7 @@ SelectStyle(index, *) {
     SelectedStyle := index
     Wave := Waves[index]
     A_TrayMenu.Check(StyleNames[index])
-    A_IconTip := "Galaxy Cursor – " StyleNames[index]
+    A_IconTip := "Galaxy Cursor"
 }
 
 StartWave(*) {
